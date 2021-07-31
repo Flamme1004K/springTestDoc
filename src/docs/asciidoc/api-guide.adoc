@@ -1,0 +1,16 @@
+= REST Docs
+Andy Wilkinson;
+:doctype: book
+:icons: font
+:source-highlighter: highlightjs
+:toc: left
+:toclevels: 2
+
+[[test]]
+== test
+[[test-조회]]
+=== test 조회
+include::{snippets}/test-doc-controller/call-test/http-request.adoc[]
+include::{snippets}/test-doc-controller/call-test/http-response.adoc[]
+include::{snippets}/test-doc-controller/call-test/response-fields.adoc[]
+include::{snippets}/test-doc-controller/call-test/curl-request.adoc[]
