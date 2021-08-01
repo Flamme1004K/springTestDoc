@@ -3,9 +3,9 @@
 
 Spring Test Case 모음집을 위한 개인 Docs입니다.
 
-## SpringRestDocs를 이용한 Controller Mock Test(20210731 ~ 20210801)
+## SpringRestDocs를 이용한 Controller Mock Test 완료(20210731 ~ 20210801)
 
-Gradle 7.1.1 Version으로 인하여, asciiDoc을 만드는데 삽질.
+Gradle 7.1.1 Version으로 인하여, asciiDoc을 만드는데 삽질함.
 
 [참고자료]
 
