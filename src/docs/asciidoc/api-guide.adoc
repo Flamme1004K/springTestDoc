@@ -1,3 +1,7 @@
+ifndef::snippets[]
+:snippets: build/generated-snippets
+endif::[]
+
 = REST Docs
 Andy Wilkinson;
 :doctype: book
@@ -8,8 +12,11 @@ Andy Wilkinson;
 
 [[test]]
 == test
+
 [[test-조회]]
+
 === test 조회
+
 include::{snippets}/test-doc-controller/call-test/http-request.adoc[]
 include::{snippets}/test-doc-controller/call-test/http-response.adoc[]
 include::{snippets}/test-doc-controller/call-test/response-fields.adoc[]

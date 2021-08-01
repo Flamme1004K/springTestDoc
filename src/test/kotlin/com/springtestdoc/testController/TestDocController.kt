@@ -38,7 +38,7 @@ class TestDocController{
     @Test
     fun callTest() {
         //given
-        val responseObject = ResponseTest(1L, "테스트", "테스트2")
+        val responseObject = ResponseTest(1L, "테스트", "")
         given(testService.getTestData(1L)).willReturn(responseObject)
 
         //when

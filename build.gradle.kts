@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.asciidoctor.convert") version "1.5.8"
+    id("org.asciidoctor.jvm.convert") version "3.3.2"
     id("org.springframework.boot") version "2.5.3"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     kotlin("jvm") version "1.5.21"
@@ -13,7 +13,7 @@ plugins {
 group = "com"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
-
+val snippetsDir by extra { file("build/generated-snippets") }
 
 
 repositories {
@@ -30,7 +30,6 @@ dependencies {
 //    runtimeOnly("org.mariadb.jdbc:mariadb-java-client")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.restdocs:spring-restdocs-mockmvc")
-    asciidoctor("org.springframework.restdocs:spring-restdocs-asciidoctor")
 }
 
 tasks.withType<KotlinCompile> {
@@ -40,23 +39,23 @@ tasks.withType<KotlinCompile> {
     }
 }
 
-val snippetsDir = file("build/generated-snippets").also { extra["snippetsDir"] = it }
-
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
 tasks.test {
     outputs.dir(snippetsDir)
 }
 
 tasks.asciidoctor {
+    attributes["snippets"] = snippetsDir
     inputs.dir(snippetsDir)
     dependsOn(tasks.test)
 }
 
 tasks.register("copyHTML", Copy::class) {
-    dependsOn(tasks.asciidoctor)
-    from(file("build/asciidoc/html5"))
+    dependsOn(tasks.findByName("asciidoctor"))
+    from(file("build/docs/asciidoc"))
     into(file("src/main/resources/static/docs"))
 }
 

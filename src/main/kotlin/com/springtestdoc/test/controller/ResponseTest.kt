@@ -5,6 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty
 
 data class ResponseTest(
     @get: JsonProperty("id") val id : Long,
-    @get: JsonProperty("name") @get: JsonInclude(JsonInclude.Include.NON_NULL) val name : String?,
-    @get: JsonProperty("type") @get: JsonInclude(JsonInclude.Include.NON_NULL) val type : String?
+    @get: JsonProperty("name") val name : String?,
+    @get: JsonProperty("type") val type : String?
 )
