@@ -20,3 +20,12 @@ https://hhseong.tistory.com/212
 https://freedeveloper.tistory.com/197
 
 https://cheese10yun.github.io/spring-rest-docs/
+
+## SpringBoot Kotlin Service Test 완료(20210806 ~ 20210808)
+
+Mock Repository를 이용한 Service 테스트 케이스 만들기
+
+코틀린과 스프링 부트의 테스트 케이스 작성은 힘든듯..
+
+https://www.ninton.co.jp/archives/8219
+
