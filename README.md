@@ -27,5 +27,9 @@ Mock Repository를 이용한 Service 테스트 케이스 만들기
 
 코틀린과 스프링 부트의 테스트 케이스 작성은 힘든듯..
 
+[참고자료]
+
+검색어 : Kotlin junit lateinit property has not been initialized
+
 https://www.ninton.co.jp/archives/8219
 
