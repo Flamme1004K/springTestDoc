@@ -35,3 +35,6 @@ out/
 
 ### VS Code ###
 .vscode/
+src/main/kotlin/com/springtestdoc/test/repository/
+src/main/resources/templates/
+src/main/resources/application.yml
